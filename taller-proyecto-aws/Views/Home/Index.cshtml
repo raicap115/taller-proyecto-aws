@@ -29,6 +29,7 @@
 </div>
 
 
+<div id="PlaceHolderHere"></div>
 <div style="margin-top: 25px;">
 
     <table class="col-12 table table-hover" style="text-align: center;">
@@ -58,7 +59,7 @@
                     <td>@participantes.distancia</td>
                     <td>@participantes.lugar</td>
                     <td>
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#detalle">Ver Detalle</button>
+                        <button type="button" class="btn btn-dark" style="margin-left: 15px;"  data-toggle="ajax-modal" data-target="#Consulta" data-url="@Url.Action($"Consulta/{participantes.id}")">Ver Detalle</button>
                     </td>
                 </tr>
 
@@ -68,7 +69,7 @@
 
     </table>
 
-    <!-- Modal -->
+    @* <!-- Modal -->
     <div class="modal fade" id="detalle" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="detalleLabel" aria-hidden="true">
         <div class="modal-dialog-lg">
             <div class="modal-content">
@@ -86,6 +87,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> *@
 
 </div>

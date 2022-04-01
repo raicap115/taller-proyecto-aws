@@ -43,6 +43,14 @@ namespace taller_proyecto_aws.Controllers
             return View(objParticipantes);
         }
 
+        public IActionResult Consulta(int id){
+                     
+            Participantes objParticipantes =new Participantes();
+            objParticipantes= _context.participantes.Where(m => m.id == id).FirstOrDefault();
+            
+            return PartialView("Consulta",objParticipantes);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
